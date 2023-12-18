@@ -11,8 +11,13 @@ return {
     neo_tree.setup{
       filesystem = {
         filtered_items = {
+          show_hidden_count = true,
           visible = true,
-          hide_dotfiles = false
+          hide_dotfiles = false,
+ 	        hide_gitignored = true,
+	        hide_by_name = {
+	          '.git',
+	        }
         }
       }
     }
