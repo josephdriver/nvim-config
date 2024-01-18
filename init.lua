@@ -11,6 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.keymap.set('n', '<C-u>', '<C-u>zz', {remap = true})
+vim.keymap.set('n', '<C-d>', '<C-d>zz', {remap = true})
+
 require("vim-options")
 require("lazy").setup({{import = "plugins"},{import = "plugins.lsp"}})
 
